@@ -1,0 +1,11 @@
+<ion-view class="bar-calm" view-title="Design Inspiration">
+  <ion-content>
+    <ion-list ng-repeat="x in data">
+      <div class="col-xs-6 col-md-3">
+        <a href="#/tab/chats/{{x.id}}" class="thumbnail">
+         <img ng-src="{{x.images.teaser}}" alt="{{x.title}}">
+         </a>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

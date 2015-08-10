@@ -1,0 +1,9 @@
+<ion-view view-title="Designer News">
+  <ion-content class="padding" >
+  <ion-list ng-repeat="y in data">
+      <li class="list-group-item list-group-item-info">
+          <span><i class="ion-android-color-palette"></i><a href="{{y.url}}" style="color:grey;"> {{y.title | limitTo : 30 : 0}}...</a></span>
+        </li>
+    </ion-list>
+  </ion-content>
+</ion-view>

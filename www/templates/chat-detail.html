@@ -1,0 +1,32 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{data.title}}">
+  <ion-content class="padding">
+    <div class="row list card">
+      <div class="col col-25"><img ng-src="{{data.user.avatar_url}}" style="width: 64px; height: 64px"></div>
+      <div class="col col-75 ">
+        {{data.user.name}}<br />
+        <b>{{data.user.location}}</b><br />
+        <a href="#">Shots <span class="badge">{{data.user.shots_count}}</span></a>
+        <a href="#">Likes <span class="badge">{{data.user.likes_count}}</span></a>
+      </div>
+    </div>
+    <div class="item item-image">
+      <img src="{{data.images.normal}}">
+    </div>
+    <p>
+      <a href="#" class="subdued">{{data.likes_count}} Likes</a>
+      <a href="#" class="subdued">{{data.comments_count}} Comments</a>
+    </p>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="{{data.html_url}}">
+      <i class="icon ion-share"></i>
+      Go to Dribble
+    </a>
+  </div>
+  </ion-content>
+</ion-view>
